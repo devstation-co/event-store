@@ -2,10 +2,10 @@ import Base from '@clean-framework/queries-interface';
 import queries from './queries';
 import controllers from './controllers';
 
-export default class CommandsApi extends Base {
+export default class Queries extends Base {
 	constructor({ application, infrastructure }) {
 		super({
-			namespace: 'eventstore.queries',
+			namespace: process.env.MICROSERVICE_NAME,
 			queries,
 			controllers,
 			application,

@@ -1,6 +1,6 @@
-import Base from '@devstation-co/application';
-import CommandsApi from './commands-api.application.micromodule';
-import QueriesApi from './queries-api.application.micromodule';
+import Base from '@clean-framework/application';
+import Commands from './commands.micromodule';
+import Queries from './queries.micromodule';
 
 export default class Application extends Base {
 	constructor({ infrastructure, domain }) {
@@ -10,11 +10,11 @@ export default class Application extends Base {
 			applications: [
 				{
 					name: 'commands',
-					application: CommandsApi,
+					application: Commands,
 				},
 				{
 					name: 'queries',
-					application: QueriesApi,
+					application: Queries,
 				},
 			],
 		});

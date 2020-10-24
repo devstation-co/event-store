@@ -1,10 +1,10 @@
-import Base from '@devstation-co/base-event.domain.micromodule';
+import Base from '@clean-framework/domain-event';
 
-export default class DeveloperCreated extends Base {
+export default class EventCommited extends Base {
 	constructor(params) {
 		super({
-			type: 'developerCreated',
-			aggregateType: 'developer',
+			type: 'eventCommited',
+			aggregateType: 'event',
 			...params,
 		});
 	}
@@ -15,13 +15,6 @@ export default class DeveloperCreated extends Base {
 		newState.id = aggregate.id;
 		newState.userId = meta.userId;
 		newState.timestamp = timestamp;
-		newState.firstName = payload.firstName;
-		newState.lastName = payload.lastName;
-		newState.emailAddresses = payload.emailAddresses.map((item) => {
-			if (item.primary) newState.primaryEmailAddress = item.emailAddress;
-			return item.emailAddress;
-		});
-		newState.phoneNumbers = payload.phoneNumbers;
 		newState.active = true;
 		return newState;
 	}
