@@ -23,12 +23,15 @@
 		"@clean-framework/application-micromodule": "^1.0.5",
 		"@clean-framework/commands-interface": "^1.0.5",
 		"@clean-framework/domain": "^1.0.5",
+		"@clean-framework/domain-entity": "^1.0.5",
+		"@clean-framework/domain-event": "^1.0.5",
+		"@clean-framework/domain-repository": "^1.0.5",
 		"@clean-framework/infrastructure": "^1.0.5",
 		"@clean-framework/interface": "^1.0.5",
 		"@clean-framework/module": "^1.0.5",
 		"@devstation.co/command-bus.infrastructure.micromodule": "^1.0.5",
 		"@devstation.co/logger.infrastructure.micromodule": "^1.0.5",
-		"@devstation.co/validator.infrastructure.micromodule": "^1.0.5",
+		"@devstation.co/validator.infrastructure.micromodule": "^1.0.6",
 		"dotenv": "^8.2.0"
 	},
 	"devDependencies": {
@@ -46,6 +49,8 @@
 		"^.+\\.[t|j]sx?$": "babel-jest"
 	},
 	"jest": {
-		"testMatch": ["**/src/**/*.spec.js"]
+		"testMatch": [
+			"**/src/**/*.spec.js"
+		]
 	}
 }

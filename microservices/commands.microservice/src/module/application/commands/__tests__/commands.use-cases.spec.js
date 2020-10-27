@@ -1,25 +1,32 @@
 /* eslint-disable no-undef */
-import EventStore from './fakes/event-store';
 import idGenerator from './fakes/id-generator';
+import Database from './fakes/database';
 import logger from './fakes/logger';
+import eventBus from './fakes/event-bus';
 import Domain from '../../../domain';
 import useCases from '../use-cases';
 
+const database = new Database({ entities: [] });
 const domain = new Domain();
-const eventstore = new EventStore({ events: [] });
-const infrastructure = { eventstore, idGenerator, logger };
+const infrastructure = { database, idGenerator, logger, eventBus };
 describe('Testing event store commands interface use cases', () => {
 	test('commitEvent', async () => {
 		const commitEvent = useCases.commitEvent({ domain, infrastructure });
 		const res = await commitEvent({
 			params: {
-				user: { id: 1 },
-				firstName: 'oualid',
-				lastName: 'sellal',
-				emailAddresses: [{ emailAddress: 'oualid.sellal@gmail.com', primary: true }],
-				phoneNumbers: ['0655443322'],
+				type: 'testCreated',
+				aggregate: {
+					id: 1,
+					type: 'test',
+				},
+				meta: {
+					userId: 1,
+				},
+				payload: {
+					name: 'test-name',
+				},
 			},
 		});
-		expect(res.type).toBe('eventCommited');
+		expect(res.status).toBe('success');
 	});
 });

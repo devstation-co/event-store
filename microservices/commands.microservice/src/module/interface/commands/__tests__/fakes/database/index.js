@@ -16,7 +16,7 @@ export default class EventStore {
 		return this.entities;
 	}
 
-	async insert({ collectionName, entity }) {
+	async insertOne({ collectionName, entity }) {
 		if (!collectionName) throw new Error('CollectioName undefined');
 		if (!entity) throw new Error('entity undefined');
 		this.entities.push(entity);

@@ -25,7 +25,7 @@
 		"@clean-framework/module": "^1.0.5",
 		"@devstation.co/command-bus.infrastructure.micromodule": "^1.0.5",
 		"@devstation.co/logger.infrastructure.micromodule": "^1.0.5",
-		"@devstation.co/validator.infrastructure.micromodule": "^1.0.5",
+		"@devstation.co/validator.infrastructure.micromodule": "^1.0.6",
 		"@devstation.co/web-server.infrastructure.micromodule": "^1.0.5",
 		"dotenv": "^8.2.0"
 	},

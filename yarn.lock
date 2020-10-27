@@ -909,6 +909,21 @@
   resolved "https://registry.yarnpkg.com/@clean-framework/commands-interface/-/commands-interface-1.0.5.tgz#c5315e1801f54d9b674e65121f3293b61a342026"
   integrity sha512-ag/NhcOzd8ZwBnbog7DdxrOzEp9n364G9qKfxD9o3gQwbxmn/KBiPOlXLPEFW9J9sr9TbfQD2sbXhYBkgLfRMw==
 
+"@clean-framework/domain-entity@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@clean-framework/domain-entity/-/domain-entity-1.0.5.tgz#6dd9845b0764e633867ac6f845fffef890502a1b"
+  integrity sha512-ADDHpnUvdzWmqgkwMrPVtPRrtvD17ThWn1FJoLzNw2tINlvYGJAu3OYsP3WxttaVp7gfzcsHd4J1Xd7EPH0uFQ==
+
+"@clean-framework/domain-event@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@clean-framework/domain-event/-/domain-event-1.0.5.tgz#776ca77da1578418f0af2a7f824b61f495b9eca1"
+  integrity sha512-1n5Wz9SpCmhxs7GiYF5U95Kss3fs/2zkeXwZXVVC95lS8F5y9DLMdVqGQpjLrE1YLHgso5KXysHvIgyvbGiqsA==
+
+"@clean-framework/domain-repository@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@clean-framework/domain-repository/-/domain-repository-1.0.5.tgz#2bdfcb17e5f7f14c3a32e22607d6314c0bed584d"
+  integrity sha512-eFwsdKZnwl4u9bhtSC8cm2FdMm5H1ykngwRsxYlFCgc+I0/nHnvukzRNb4RAZJtJCeqN/aF6XbbyRnlNyyQSKg==
+
 "@clean-framework/domain@^1.0.5":
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/@clean-framework/domain/-/domain-1.0.5.tgz#e35e1354de477fe7412797b06f97e3b9ec212b60"
@@ -983,10 +998,10 @@
   dependencies:
     mongodb "^3.6.2"
 
-"@devstation.co/validator.infrastructure.micromodule@^1.0.5":
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@devstation.co/validator.infrastructure.micromodule/-/validator.infrastructure.micromodule-1.0.5.tgz#a9ae4776819c7dc85f3ab493ebfeeabce28e11df"
-  integrity sha512-VKfH7T8rjxlbf2hPQlZGgf3RgCKZnIlUQQj/V2JhemXFt5DPAuiBP6b1L7MSitSrukGz1HjlW4Eoupg6Tjgdiw==
+"@devstation.co/validator.infrastructure.micromodule@^1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@devstation.co/validator.infrastructure.micromodule/-/validator.infrastructure.micromodule-1.0.6.tgz#0dac7a0282f480d5c62f4b4bab0a6d41ec3efeec"
+  integrity sha512-GlG7KgJxipoT9IbDIjO2q3XumlZ78Sb7Jr6U6j+6esojF9ziSIUrYOVgm3LgJEeQjCGi4ncN851oXaeA7KqauQ==
   dependencies:
     fastest-validator "^1.7.0"
 
