@@ -7,26 +7,23 @@ const event = new Event({ database });
 describe('Testing event entity', () => {
 	beforeEach(async () => {
 		event.setId({ id: 1 });
-		await event.hydrate();
 	});
 
-	test('save', async () => {
+	test('create', async () => {
 		const eventToSave = {
-			id: 1,
-			type: 'eventCommited',
-			timestamp: new Date(),
+			type: 'testCreated',
 			aggregate: {
-				id: 1,
-				type: 'event',
+				id: '1',
+				type: 'test',
 			},
 			meta: {
-				userId: 1,
+				userId: '1',
 			},
 			payload: {
-				event: {},
+				name: 'test-name',
 			},
 		};
-		const res = await event.repository.save({ state: eventToSave });
-		expect(res).toBeTruthy();
+		const res = await event.create({ event: eventToSave });
+		expect(res.status).toBe('success');
 	});
 });

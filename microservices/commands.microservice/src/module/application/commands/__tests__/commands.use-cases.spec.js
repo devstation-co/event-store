@@ -16,11 +16,11 @@ describe('Testing event store commands interface use cases', () => {
 			params: {
 				type: 'testCreated',
 				aggregate: {
-					id: 1,
+					id: '1',
 					type: 'test',
 				},
 				meta: {
-					userId: 1,
+					userId: '1',
 				},
 				payload: {
 					name: 'test-name',

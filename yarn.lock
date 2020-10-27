@@ -998,10 +998,10 @@
   dependencies:
     mongodb "^3.6.2"
 
-"@devstation.co/validator.infrastructure.micromodule@^1.0.6":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@devstation.co/validator.infrastructure.micromodule/-/validator.infrastructure.micromodule-1.0.6.tgz#0dac7a0282f480d5c62f4b4bab0a6d41ec3efeec"
-  integrity sha512-GlG7KgJxipoT9IbDIjO2q3XumlZ78Sb7Jr6U6j+6esojF9ziSIUrYOVgm3LgJEeQjCGi4ncN851oXaeA7KqauQ==
+"@devstation.co/validator.infrastructure.micromodule@^1.0.7":
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/@devstation.co/validator.infrastructure.micromodule/-/validator.infrastructure.micromodule-1.0.7.tgz#ea2ce7264098cafcc6121d6f1cae6e073cfc17f7"
+  integrity sha512-1zdDMD1bGIot0We/798kFxBaFwTMHD3TUm2X4OBU668Eh2BqQETiuGqY7sT/lTWCSeYkLglXMcWXsPyo/RhAIQ==
   dependencies:
     fastest-validator "^1.7.0"
 

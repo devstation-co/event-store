@@ -8,6 +8,8 @@ import idGenerator from './fakes/id-generator';
 import logger from './fakes/logger';
 import eventBus from './fakes/event-bus';
 
+require('dotenv').config();
+
 const database = new Database({ entities: [] });
 const validator = new Validator();
 const domain = new Domain();
@@ -18,13 +20,14 @@ describe('Testing developer commands api controllers', () => {
 		const commitEvent = controllers.commitEvent({ infrastructure, application });
 		const res = await commitEvent({
 			params: {
+				token: '1234567',
 				type: 'testCreated',
 				aggregate: {
-					id: 1,
+					id: '1',
 					type: 'test',
 				},
 				meta: {
-					userId: 1,
+					userId: '1',
 				},
 				payload: {
 					name: 'test-name',

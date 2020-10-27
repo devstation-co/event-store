@@ -5,16 +5,11 @@ export default function commitEvent({ infrastructure, domain }) {
 			const event = new Event({
 				database: infrastructure.database,
 			});
-			const newEvent = {
-				id: infrastructure.idGenerator.generate(),
-				type: params.type,
-				timestamp: new Date(),
-				aggregate: params.aggregate,
-				meta: params.meta || {},
-				payload: params.payload || {},
-			};
-			await event.repository.save({ state: newEvent });
-			await infrastructure.eventBus.publish(newEvent);
+			event.setId({ id: infrastructure.idGenerator.generate() });
+			const res = await event.create({
+				event: params,
+			});
+			await infrastructure.eventBus.publish({ event: res.payload });
 			return { status: 'success', timestamp: new Date() };
 		} catch (error) {
 			infrastructure.logger.error({

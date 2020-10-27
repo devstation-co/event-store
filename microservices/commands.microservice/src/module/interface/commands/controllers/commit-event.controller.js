@@ -3,6 +3,11 @@ export default function commitEvent({ infrastructure, application }) {
 		try {
 			const schema = {
 				$$strict: 'remove',
+				token: {
+					type: 'string',
+					optional: false,
+					empty: false,
+				},
 				type: {
 					type: 'string',
 					optional: false,
@@ -33,7 +38,14 @@ export default function commitEvent({ infrastructure, application }) {
 				},
 			};
 			await infrastructure.validator.validate({ data: params, schema });
-			const res = await application.commands.commitEvent({ params });
+			if (params.token !== process.env.EVENTSTORE_TOKEN) throw new Error('Unauthorized');
+			const event = {
+				type: params.type,
+				aggregate: params.aggregate,
+				meta: params.meta,
+				payload: params.payload,
+			};
+			const res = await application.commands.commitEvent({ params: event });
 			return res;
 		} catch (error) {
 			infrastructure.logger.error({
