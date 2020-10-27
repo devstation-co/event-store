@@ -9,12 +9,6 @@ import HttpApi from './module';
 			},
 			webServer: {
 				port: process.env.WEB_SERVER_PORT,
-				redis: {
-					port: process.env.REDIS_PORT,
-					host: process.env.REDIS_HOST,
-					password: process.env.REDIS_PASSWORD,
-					db: 0,
-				},
 				init: true,
 			},
 			commandBus: {

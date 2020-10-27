@@ -1,5 +1,5 @@
 {
-	"name": "event-store-service",
+	"name": "event-store",
 	"author": "Mohamed Oualid Sellal <oualid.sellal@gmail.com>",
 	"license": "closed",
 	"private": true,

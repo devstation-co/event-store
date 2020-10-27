@@ -29,12 +29,7 @@ import CommandsModule from './module';
 			},
 			eventstore: {
 				dependencies: ['commandBus'],
-				version: process.env.EVENTSTORE_VERSION,
 				token: process.env.EVENTSTORE_TOKEN,
-			},
-			auth: {
-				jwtSecret: process.env.JWT_SECRET,
-				saltRound: process.env.SALT_ROUND,
 			},
 		},
 	});
