@@ -27,10 +27,6 @@ import CommandsModule from './module';
 				},
 				init: true,
 			},
-			eventstore: {
-				dependencies: ['commandBus'],
-				token: process.env.EVENTSTORE_TOKEN,
-			},
 		},
 	});
 	const interfaces = ['commands'];

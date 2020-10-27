@@ -17,6 +17,16 @@
 		"build": "babel src --out-dir dist --root-mode upward --ignore **/*.spec.js"
 	},
 	"dependencies": {
+		"@clean-framework/application": "^1.0.5",
+		"@clean-framework/application-micromodule": "^1.0.5",
+		"@clean-framework/commands-interface": "^1.0.5",
+		"@clean-framework/domain": "^1.0.5",
+		"@clean-framework/infrastructure": "^1.0.5",
+		"@clean-framework/interface": "^1.0.5",
+		"@clean-framework/module": "^1.0.5",
+		"@devstation.co/command-bus.infrastructure.micromodule": "^1.0.5",
+		"@devstation.co/logger.infrastructure.micromodule": "^1.0.5",
+		"@devstation.co/validator.infrastructure.micromodule": "^1.0.5",
 		"dotenv": "^8.2.0"
 	},
 	"devDependencies": {
@@ -29,5 +39,8 @@
 		"babel-jest": "^26.3.0",
 		"jest": "^26.4.2",
 		"nodemon": "^2.0.4"
+	},
+	"transform": {
+		"^.+\\.[t|j]sx?$": "babel-jest"
 	}
 }

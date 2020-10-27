@@ -1,4 +1,4 @@
-import Base from '@devstation-co/application';
+import Base from '@clean-framework/application';
 import Commands from './commands';
 
 export default class Application extends Base {
