@@ -1,4 +1,5 @@
-import Database from '@devstation-co/database.fake.micromodule';
+/* eslint-disable no-undef */
+import Database from './fakes/database';
 import Event from '../entities/event';
 
 const database = new Database({ entities: [] });
@@ -10,7 +11,7 @@ describe('Testing event entity', () => {
 	});
 
 	test('Apply eventCommited event', async () => {
-		const event = {
+		const eventToTest = {
 			id: 1,
 			type: 'eventCommited',
 			timestamp: new Date(),
@@ -25,7 +26,7 @@ describe('Testing event entity', () => {
 				event: {},
 			},
 		};
-		await developer.apply({ events: [event], save: true });
+		await developer.apply({ events: [eventToTest], save: true });
 		const state = developer.getState();
 		expect(state.id).toBe(event.aggregate.id);
 		expect(state.timestamp).toBe(event.timestamp);
