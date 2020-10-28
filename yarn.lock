@@ -979,10 +979,10 @@
     nats "^1.4.12"
     opossum "^5.0.1"
 
-"@devstation.co/database.infrastructure.micromodule@^1.0.5", "@devstation.co/database.infrastructure.micromodule@^1.0.8":
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/@devstation.co/database.infrastructure.micromodule/-/database.infrastructure.micromodule-1.0.8.tgz#d87be1d45599557e763b265f4269a0ae28cd6f5e"
-  integrity sha512-Q1sT8TtIJsDsiHIbpScyRC427Fh1TzupPQVagyVAnnsLWjqLX4k0jbmZufypG3WqYMI0QfixVVIE/P3mrPRr8w==
+"@devstation.co/database.infrastructure.micromodule@^1.0.12":
+  version "1.0.12"
+  resolved "https://registry.yarnpkg.com/@devstation.co/database.infrastructure.micromodule/-/database.infrastructure.micromodule-1.0.12.tgz#d1bbb9027fbd54ce05672c16d38887d617db220f"
+  integrity sha512-68MYiZy2f8kECKVmV4o5AM6xDFLhoJv08Hxd5nqw45j+QPN1sBDdPOCRToptL+nPI+iLdlXIP/Il5fqtGV2v+A==
 
 "@devstation.co/event-bus.infrastructure.micromodule@^1.0.5":
   version "1.0.5"
@@ -1006,10 +1006,10 @@
   dependencies:
     winston "^3.3.3"
 
-"@devstation.co/mongodb.infrastructure.micromodule@^1.0.5":
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@devstation.co/mongodb.infrastructure.micromodule/-/mongodb.infrastructure.micromodule-1.0.5.tgz#d0e75c5098d2d8d9857ae5386713473522e3405d"
-  integrity sha512-x44Bp7N11KqXHg5myOd5W6OoBd3u+0IceIW2rINVRQ85xB7pPRzOFFzeXmV6AiBKY2RuQRvLVkLb/K9FgeorGQ==
+"@devstation.co/mongodb.infrastructure.micromodule@^1.0.12":
+  version "1.0.12"
+  resolved "https://registry.yarnpkg.com/@devstation.co/mongodb.infrastructure.micromodule/-/mongodb.infrastructure.micromodule-1.0.12.tgz#e52a5842f1388fdbd67c1158b96a5a63f82fa17f"
+  integrity sha512-Dso57T+ArF5H2x5CE4jGY25dD+qwPQEgRCTmYQgBeXqe1ZOs089/aB6ZlWVcUmBmVkcZj9QdKpT99l8v+cMJSQ==
   dependencies:
     mongodb "^3.6.2"
 
@@ -1020,10 +1020,10 @@
   dependencies:
     fastest-validator "^1.7.0"
 
-"@devstation.co/web-server.infrastructure.micromodule@^1.0.10":
-  version "1.0.10"
-  resolved "https://registry.yarnpkg.com/@devstation.co/web-server.infrastructure.micromodule/-/web-server.infrastructure.micromodule-1.0.10.tgz#e1adb09ba718b6fc88d3020617435e5025a6a402"
-  integrity sha512-ze8FDF6eHIWIIGksGQlGcUn3e9BE4XYvyVVlXS3RNRfWkxVHsK6+rDrDBXPeX/E6sqihYXi5PN9X53Niv4SP6g==
+"@devstation.co/web-server.infrastructure.micromodule@^1.0.11":
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/@devstation.co/web-server.infrastructure.micromodule/-/web-server.infrastructure.micromodule-1.0.11.tgz#45e06ee396c5441d8fe4b6ba594845848f0b1948"
+  integrity sha512-P7sEp0NmEtQt5RVZ1Gg3cspubHTfg6QNAwGmduc79DouQLReDzivxErUm9SyJtYKQu564fyQylRgAcRkiKieCg==
   dependencies:
     body-parser "^1.19.0"
     cors "^2.8.5"

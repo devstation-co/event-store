@@ -1,6 +1,6 @@
 export default {
 	name: 'commitEvent',
-	path: '/',
+	path: '/commit-event',
 	method: 'post',
 	controller: 'commitEvent',
 	middlewares: [],

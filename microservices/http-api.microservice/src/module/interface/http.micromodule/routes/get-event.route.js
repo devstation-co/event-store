@@ -1,7 +1,6 @@
 export default {
 	name: 'getEvent',
-	path: '/event',
+	path: '/get-event',
 	method: 'get',
-	controller: 'getEvent',
 	middlewares: [],
 };

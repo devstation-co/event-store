@@ -1,6 +1,6 @@
 export default {
 	name: 'getEventsByAggregateId',
-	path: '/events-by-aggregate-id',
+	path: '/get-events-by-aggregate-id',
 	method: 'get',
 	middlewares: [],
 };

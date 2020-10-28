@@ -1,7 +1,6 @@
 export default {
 	name: 'getAllEvents',
-	path: '/events',
+	path: '/get-all-events',
 	method: 'get',
-	controller: 'getAllEvents',
 	middlewares: [],
 };
