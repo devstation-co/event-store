@@ -1,5 +1,5 @@
 import Base from '@clean-framework/interface';
-import Queries from './queries';
+import Queries from './queries.micromodule';
 
 export default class Interface extends Base {
 	constructor({ application, infrastructure }) {

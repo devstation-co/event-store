@@ -6,7 +6,7 @@
 	"scripts": {
 		"bootstrap": "lerna clean -y && lerna bootstrap && yarn run build",
 		"build": "lerna exec --parallel -- rimraf dist && lerna exec --parallel -- babel --root-mode upward src -d dist --ignore **/*.test.js",
-		"clean": "lerna clean --yes",
+		"clean": "lerna clean --yes && rimraf node_modules",
 		"link": "lerna link",
 		"lint": "lerna exec --parallel eslint src",
 		"dev": "lerna run dev --stream",
@@ -37,5 +37,13 @@
 	},
 	"workspaces": [
 		"microservices/*"
-	]
+	],
+	"transform": {
+		"^.+\\.[t|j]sx?$": "babel-jest"
+	},
+	"jest": {
+		"testMatch": [
+			"**/src/**/*.spec.js"
+		]
+	}
 }

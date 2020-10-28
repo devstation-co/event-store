@@ -12,7 +12,7 @@
 		"access": "public"
 	},
 	"scripts": {
-		"dev": "nodemon -r dotenv/config --watch ../../ --exec 'babel-node --ignore 'node_modules' --root-mode upward ./src/microservice.js'",
+		"dev": "nodemon -r dotenv/config --watch . --exec 'babel-node --ignore 'node_modules' --root-mode upward ./src/microservice.js'",
 		"start": "yarn run build && node -r dotenv/config ./dist/microservice.js",
 		"build": "rimraf dist && babel src --out-dir dist --root-mode upward --ignore **/*.spec.js",
 		"test": "jest ./src --runInBand --detectOpenHandles --forceExit",
@@ -25,10 +25,12 @@
 		"@clean-framework/interface": "^1.0.5",
 		"@clean-framework/module": "^1.0.5",
 		"@clean-framework/queries-interface": "^1.0.5",
+		"@clean-framework/domain-entity": "^1.0.5",
+		"@clean-framework/domain-repository": "^1.0.5",
 		"@devstation.co/command-bus.infrastructure.micromodule": "^1.0.5",
-		"@devstation.co/database.infrastructure.micromodule": "^1.0.5",
+		"@devstation.co/database.infrastructure.micromodule": "^1.0.12",
 		"@devstation.co/logger.infrastructure.micromodule": "^1.0.5",
-		"@devstation.co/mongodb.infrastructure.micromodule": "^1.0.5",
+		"@devstation.co/mongodb.infrastructure.micromodule": "^1.0.12",
 		"@devstation.co/validator.infrastructure.micromodule": "^1.0.7"
 		
 	},

@@ -1020,10 +1020,10 @@
   dependencies:
     fastest-validator "^1.7.0"
 
-"@devstation.co/web-server.infrastructure.micromodule@^1.0.8":
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/@devstation.co/web-server.infrastructure.micromodule/-/web-server.infrastructure.micromodule-1.0.8.tgz#0f62bfb671632e7f0e132b2eed56f68de6138d99"
-  integrity sha512-gtOoReKM84ORq4kK+ay2ERubKLwFqZ4qR65Bzn/Perwx6nHMMScqc9tkWAzO8EPwSr0oA1zysYQ2dB87i5l+BA==
+"@devstation.co/web-server.infrastructure.micromodule@^1.0.10":
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/@devstation.co/web-server.infrastructure.micromodule/-/web-server.infrastructure.micromodule-1.0.10.tgz#e1adb09ba718b6fc88d3020617435e5025a6a402"
+  integrity sha512-ze8FDF6eHIWIIGksGQlGcUn3e9BE4XYvyVVlXS3RNRfWkxVHsK6+rDrDBXPeX/E6sqihYXi5PN9X53Niv4SP6g==
   dependencies:
     body-parser "^1.19.0"
     cors "^2.8.5"

@@ -32,7 +32,7 @@ import QueriesModule from './module';
 			},
 		},
 	});
-	const interfaces = ['queries', 'events'];
+	const interfaces = ['queries'];
 	await queriesModule.init();
 	const res = await queriesModule.interface.run({ interfaces });
 	if (process.env.NODE_ENV === 'dev')

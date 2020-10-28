@@ -1,11 +1,13 @@
-export default function getAllEvents({ infrastructure, domain }) {
-	return async () => {
+export default function getEventsByAggregateId({ infrastructure, domain }) {
+	return async ({ params }) => {
 		try {
 			const { Event } = domain.main.entities;
 			const event = new Event({
 				database: infrastructure.database,
 			});
-			const events = await event.repository.getEvents();
+			const events = await event.repository.getEventsByAggregateId({
+				aggregateId: params.aggregateId,
+			});
 			return events;
 		} catch (error) {
 			infrastructure.logger.error({
@@ -18,7 +20,7 @@ export default function getAllEvents({ infrastructure, domain }) {
 						type: 'application',
 					},
 					method: {
-						name: 'getAllEvents',
+						name: 'getEventsByAggregateId',
 						type: 'use-case',
 					},
 				},
