@@ -1,4 +1,5 @@
-import signIn from './sign-in.route';
+import getEvents from './get-events.route';
 import health from './health.route';
+import commitEvent from './commit-event.route';
 
-export default [signIn, health];
+export default [getEvents, health, commitEvent];

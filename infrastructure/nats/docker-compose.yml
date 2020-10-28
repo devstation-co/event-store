@@ -1,0 +1,26 @@
+version: '3.3'
+
+services:
+  nats:
+    image: 'nats:latest'
+    container_name: nats
+    command:
+      - '--user'
+      - ${NATS_USERNAME}
+      - '--pass'
+      - ${NATS_PASSWORD}
+    env_file:
+      - .env
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+        window: 120s
+    networks:
+      - infrastructure_network
+    ports:
+      - '4222:4222'
+      - '6222:6222'
+      - '8222:8222'

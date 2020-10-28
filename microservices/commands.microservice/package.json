@@ -14,7 +14,7 @@
 	"scripts": {
 		"dev": "nodemon -r dotenv/config --watch ../../ --exec 'babel-node --ignore 'node_modules' --root-mode upward ./src/microservice.js'",
 		"start": "yarn run build && node -r dotenv/config ./dist/microservice.js",
-		"build": "babel src --out-dir dist --root-mode upward --ignore **/*.spec.js",
+		"build": "rimraf dist && babel src --out-dir dist --root-mode upward --ignore **/*.spec.js",
 		"test": "jest ./src --runInBand --detectOpenHandles --forceExit",
 		"test:watch": "jest ./src --runInBand --detectOpenHandles --watch"
 	},
@@ -32,7 +32,11 @@
 		"@devstation.co/command-bus.infrastructure.micromodule": "^1.0.5",
 		"@devstation.co/logger.infrastructure.micromodule": "^1.0.5",
 		"@devstation.co/validator.infrastructure.micromodule": "^1.0.7",
-		"dotenv": "^8.2.0"
+		"@devstation.co/database.infrastructure.micromodule": "^1.0.8",
+		"@devstation.co/mongodb.infrastructure.micromodule": "^1.0.5",
+		"@devstation.co/id-generator.infrastructure.micromodule": "^1.0.5",
+		"@devstation.co/event-bus.infrastructure.micromodule":"^1.0.5"
+		
 	},
 	"devDependencies": {
 		"@babel/cli": "^7.11.6",
@@ -43,7 +47,9 @@
 		"@babel/preset-env": "^7.11.5",
 		"babel-jest": "^26.3.0",
 		"jest": "^26.4.2",
-		"nodemon": "^2.0.4"
+		"nodemon": "^2.0.4",
+		"rimraf": "^3.0.2",
+		"dotenv": "^8.2.0"
 	},
 	"transform": {
 		"^.+\\.[t|j]sx?$": "babel-jest"

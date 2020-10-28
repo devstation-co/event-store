@@ -1,0 +1,25 @@
+version: '3.3'
+
+services:
+  redis:
+    image: 'docker.io/bitnami/redis:6.0-debian-10'
+    command: redis-server /usr/local/etc/redis/redis.conf
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+        window: 120s
+    env_file:
+      - .env
+    environment:
+      # ALLOW_EMPTY_PASSWORD is recommended only for development.
+      - ALLOW_EMPTY_PASSWORD=no
+      - REDIS_DISABLE_COMMANDS=FLUSHDB,FLUSHALL
+      - REDIS_PASSWORD=${REDIS_PASSWORD}
+    volumes:
+      - ./volume:/var/lib/redis
+      - ./redis.conf:/usr/local/etc/redis/redis.conf
+    ports:
+      - '6379:6379'

@@ -27,6 +27,18 @@ import CommandsModule from './module';
 				},
 				init: true,
 			},
+			mongodb: {
+				host: process.env.MONGO_HOST,
+				port: process.env.MONGO_PORT,
+				username: process.env.MONGO_USERNAME,
+				password: process.env.MONGO_PASSWORD,
+				db: process.env.MONGO_DB,
+			},
+			database: {
+				dependencies: ['logger', 'mongodb'],
+				type: 'mongodb',
+				init: true,
+			},
 		},
 	});
 	const interfaces = ['commands'];

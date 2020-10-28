@@ -2,11 +2,10 @@ export default function getEvents({ infrastructure }) {
 	return async ({ params }) => {
 		try {
 			const query = {
-				name: 'getTokenAndUser',
-				handler: 'authentication.projection',
+				name: 'getEvents',
+				handler: 'event-store.queries',
 				params: {
-					username: params.username,
-					password: params.password,
+					token: params.token,
 				},
 			};
 			const response = await infrastructure.commandBus.handle(query);
@@ -14,15 +13,15 @@ export default function getEvents({ infrastructure }) {
 		} catch (error) {
 			infrastructure.logger.error({
 				message: error.message,
-				module: 'websocket-api',
+				module: 'http-api',
 				source: {
-					service: 'authentication',
+					service: 'event-store',
 					layer: {
 						name: 'api',
 						type: 'application',
 					},
 					method: {
-						name: 'signIn',
+						name: 'getEvents',
 						type: 'use-case',
 					},
 				},

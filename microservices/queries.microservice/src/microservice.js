@@ -17,7 +17,6 @@ import QueriesModule from './module';
 				},
 				init: true,
 			},
-
 			mongodb: {
 				host: process.env.MONGO_HOST,
 				port: process.env.MONGO_PORT,

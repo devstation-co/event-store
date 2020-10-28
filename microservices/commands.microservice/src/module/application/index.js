@@ -1,5 +1,5 @@
 import Base from '@clean-framework/application';
-import Commands from './commands';
+import Commands from './commands.micromodule';
 
 export default class Application extends Base {
 	constructor({ infrastructure, domain }) {

@@ -1,4 +1,5 @@
-import signIn from './sign-in.controller';
+import getEvents from './get-events.controller';
 import checkHealth from './check-health.controller';
+import commitEvent from './commit-event.controller';
 
-export default { signIn, checkHealth };
+export default { getEvents, checkHealth, commitEvent };
